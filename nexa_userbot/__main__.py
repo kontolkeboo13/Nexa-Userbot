@@ -17,9 +17,9 @@ logging.getLogger("pyrogram.parser.html").setLevel(logging.ERROR)
 
 async def main_startup():
     print("""
-|| Nexa Userbot ||
+|| royadi Userbot ||
 
-Copyright (c) 2021 Itz-fork
+Copyright (c) 2023
 """
     )
     await NEXAUB.start()
@@ -35,10 +35,10 @@ Copyright (c) 2021 Itz-fork
     logging.info(" >>  Checking ARQ API Key...")
     await check_arq_api()
     try:
-        await NEXAUB.send_message(chat_id=log_channel_id[1], text="`Nexa Userbot is alive!`")
+        await NEXAUB.send_message(chat_id=log_channel_id[1], text="`royadi Userbot is alive!`")
     except:
         logging.warn("There was an error while creating the LOG CHANNEL please add a one manually!")
-    logging.info("\n\n ✨ Nexa-Userbot is Alive \n\n")
+    logging.info("\n\n ✨ royadi-Userbot is Alive \n\n")
     await idle()
 
 loop = asyncio.get_event_loop()
