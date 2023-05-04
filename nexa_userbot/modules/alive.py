@@ -88,7 +88,7 @@ async def pyroalive(_, message: Message):
     alive_bef_msg = await e_or_r(nexaub_message=message, msg_text="`Processing...`")
     # Alive Message
     get_alive_msg = await get_custom_alive_msg()
-    custom_alive_msg = get_alive_msg if get_alive_msg else "Heya, I'm Using Nexa Userbot"
+    custom_alive_msg = get_alive_msg if get_alive_msg else "Heya, I'm Using royadi Userbot"
     # Alive Pic
     g_al_pic = await get_custom_var(var="ALIVE_PIC")
     alive_pic = g_al_pic[1] if g_al_pic else "cache/NEXAUB.png"
@@ -98,9 +98,9 @@ async def pyroalive(_, message: Message):
 **{custom_alive_msg}**
 
 
-**✨ Nexa UserBot is Alive**
+**✨ royadi UserBot is Alive**
     
-    **》 Nexa Userbot Version:** `{NEXAUB_VERSION}`
+    **》 royadi Userbot Version:** `{NEXAUB_VERSION}`
     **》 Python Version:** `{python_version}`
     **》 Pyrogram Version:** `{pyrogram_version}`
     **》 Uptime:** `{uptime}`
@@ -108,7 +108,7 @@ async def pyroalive(_, message: Message):
     **》 Loaded Custom Plugins:** `{len(xtra_modules)}`
 
 
-**Deploy Your Own: @NexaBotsUpdates**"""
+**Deploy Your Own: @xxGRAMZ**"""
     await alive_bef_msg.delete()
     if g_al_pic and g_al_pic[0] == "gif":
         await NEXAUB.send_animation(chat_id=message.chat.id, animation=alive_pic, caption=alive_msg)
@@ -122,7 +122,7 @@ async def pingme(_, message: Message):
     ping_msg = await e_or_r(nexaub_message=message, msg_text="`Processing...`")
     end = datetime.now()
     ping_time = (end - start).microseconds / 1000
-    await ping_msg.edit(f"**Pong:** `{ping_time} ms` \n\n ~ **✨ Nexa-Userbot**", disable_web_page_preview=True)
+    await ping_msg.edit(f"**Pong:** `{ping_time} ms` \n\n ~ **✨ royadi-Userbot**", disable_web_page_preview=True)
 
 # Set custom alive message
 @nexaub.on_cmd(command=["setalive"])
@@ -181,9 +181,9 @@ async def get_alive_pic(_, message: Message):
         ptype = g_al_pic[0]
         await get_pic_msg.delete()
         if ptype == "gif":
-            await NEXAUB.send_animation(chat_id=message.chat.id, animation=picture, caption=f"**Nexa-Userbot's Custom Alive Picture** \n\n**Type:** `{ptype}`")
+            await NEXAUB.send_animation(chat_id=message.chat.id, animation=picture, caption=f"**royadi-Userbot's Custom Alive Picture** \n\n**Type:** `{ptype}`")
         else:
-            await NEXAUB.send_photo(chat_id=message.chat.id, photo=picture, caption=f"**Nexa-Userbot's Custom Alive Picture** \n\n**Type:** `{ptype}`")
+            await NEXAUB.send_photo(chat_id=message.chat.id, photo=picture, caption=f"**royadi-Userbot's Custom Alive Picture** \n\n**Type:** `{ptype}`")
     else:
         await get_pic_msg.edit("`Save a custom alive picture first!`")
 
